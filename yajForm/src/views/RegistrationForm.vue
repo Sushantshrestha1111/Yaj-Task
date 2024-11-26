@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col items-center justify-start min-h-screen pt-10">
+  <div class="flex flex-col w-full items-center justify-start min-h-screen pt-10">
     <span class="text-2xl">
-      <strong><h2>Complain Registration</h2></strong>
+      <strong><h2 class="text-[32px] font-Satoshi">Complain Registration </h2></strong>
     </span>
 
     <div class="flex flex-row pl-5 justify-center w-full mt-6">
@@ -18,17 +18,17 @@
         </div>
 
         <!-- form Begins from here -->
-        <div class="flex flex-col ml-4">
-          <h1 class="text-xl">
-            <strong>Complain Details</strong>
+        <div class="flex flex-col ml-4 w-1/2">
+          <h1 class="text-xl mb-6 text-[24px]">
+            Complain Details
           </h1>
 
           <YellowBanner />
 
           <!-- Nature of problem -->
 
-          <div class="flex flex-col l-0 mb-4 r-0 w-full">
-            <span class="block mb-2 text-gray-700 font-medium"
+          <div class="flex flex-col l-0 mb-4 mt-4 r-0 w-full">
+            <span class="block mb-2 text-gray-400 font-medium"
               >Nature of Problem *</span
             >
 
@@ -46,13 +46,13 @@
               >
                 <SelectGroup>
                   <SelectLabel class="text-sm font-semibold text-gray-500"
-                    >Fruits</SelectLabel
+                    >State Of Problem</SelectLabel
                   >
                   <SelectItem
-                    value="apple"
+                    value="op1"
                     class="text-gray-800 hover:bg-indigo-100 hover:text-indigo-700 focus:ring focus:ring-indigo-200 rounded-md px-2 py-1"
                   >
-                    Apple
+                    op1
                   </SelectItem>
                 </SelectGroup>
               </SelectContent>
@@ -60,7 +60,7 @@
           </div>
           <!-- Name of Office -->
           <div class="mb-4">
-            <span>Name of Office</span>
+            <span class="text-gray-400 mb-4">Name of Office</span>
             <Input type="text" placeholder="Enter office name" />
           </div>
 
@@ -68,57 +68,57 @@
           <div class="flex flex-row mb-4 w-full gap-x-4">
   <!-- State -->
   <div class="flex flex-col flex-1">
-    <span>State</span>
+    <span class="text-gray-400">State</span>
     <Select>
       <SelectTrigger class="w-full">
-        <SelectValue placeholder="Select a fruit" />
+        <SelectValue placeholder="Select State" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Fruits</SelectLabel>
-          <SelectItem value="apple"> Apple </SelectItem>
-          <SelectItem value="banana"> Banana </SelectItem>
-          <SelectItem value="blueberry"> Blueberry </SelectItem>
-          <SelectItem value="grapes"> Grapes </SelectItem>
-          <SelectItem value="pineapple"> Pineapple </SelectItem>
+          <SelectLabel>Options</SelectLabel>
+          <SelectItem value="1"> op1 </SelectItem>
+          <SelectItem value="2"> opt 2 </SelectItem>
+          <SelectItem value="3"> opt 3 </SelectItem>
+          <SelectItem value="4"> opt 4</SelectItem>
+          <SelectItem value="5">opt 5 </SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
   </div>
   <!-- District -->
   <div class="flex flex-col flex-1">
-    <span>District</span>
+    <span class="text-gray-400">District</span>
     <Select>
       <SelectTrigger class="w-full">
-        <SelectValue placeholder="Select a fruit" />
+        <SelectValue placeholder="Select a district" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Fruits</SelectLabel>
-          <SelectItem value="apple"> Apple </SelectItem>
-          <SelectItem value="banana"> Banana </SelectItem>
-          <SelectItem value="blueberry"> Blueberry </SelectItem>
-          <SelectItem value="grapes"> Grapes </SelectItem>
-          <SelectItem value="pineapple"> Pineapple </SelectItem>
+          <SelectLabel>Options</SelectLabel>
+          <SelectItem value="1"> op1 </SelectItem>
+          <SelectItem value="2"> opt 2 </SelectItem>
+          <SelectItem value="3"> opt 3 </SelectItem>
+          <SelectItem value="4"> opt 4</SelectItem>
+          <SelectItem value="5">opt 5 </SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
   </div>
   <!-- Municipality -->
   <div class="flex flex-col flex-1">
-    <span>Municipality</span>
+    <span class="text-gray-400">Municipality</span>
     <Select>
       <SelectTrigger class="w-full">
-        <SelectValue placeholder="Select a fruit" />
+        <SelectValue placeholder="Select a Muncipility" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Fruits</SelectLabel>
-          <SelectItem value="apple"> Apple </SelectItem>
-          <SelectItem value="banana"> Banana </SelectItem>
-          <SelectItem value="blueberry"> Blueberry </SelectItem>
-          <SelectItem value="grapes"> Grapes </SelectItem>
-          <SelectItem value="pineapple"> Pineapple </SelectItem>
+          <SelectLabel>Options</SelectLabel>
+          <SelectItem value="1"> op1 </SelectItem>
+          <SelectItem value="2"> opt 2 </SelectItem>
+          <SelectItem value="3"> opt 3 </SelectItem>
+          <SelectItem value="4"> opt 4</SelectItem>
+          <SelectItem value="5">opt 5 </SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
@@ -131,12 +131,12 @@
           <div class="flex flex-row mb-4 w-full gap-x-4">
   <!-- Ward No. -->
   <div class="flex flex-col flex-1">
-    <span>Ward No.</span>
+    <span class="text-gray-400">Ward No.</span>
     <Input type="text" placeholder="Enter Ward No." />
   </div>
   <!-- Street Address -->
   <div class="flex flex-col flex-1">
-    <span>Street Address</span>
+    <span class="text-gray-400">Street Address</span>
     <Input type="text" placeholder="Enter Street Address" />
   </div>
 </div>
@@ -149,15 +149,15 @@
 
           <!-- Brief Description of complaint * -->
           <div class="flex flex-col mb-4">
-            <Label for="Description">Brief Description of complaint *</Label>
+            <Label class="text-gray-400" for="Description">Brief Description of complaint *</Label>
             <Textarea placeholder="Type your message here." />
           </div>
           <!-- Complaint Servicity -->
           <div class="mb-4 justify-between">
-  <Label for="ComplaintServivity">Complaint Servicity *</Label>
+  <Label class="mb-4" for="ComplaintServivity">Complaint Servicity *</Label>
 
   <RadioGroup default-value="comfortable">
-  <div class="flex flex-row gap-x-4 w-full">
+  <div class="flex flex-row mt-4 gap-x-4 w-full">
     <!-- Common -->
     <div class="flex flex-row items-center space-x-2 flex-1">
       <RadioGroupItem id="r1" value="default" />
@@ -182,19 +182,19 @@
           <!-- Random checkBox -->
 
           <div>
-            <div class="flex flex-row mb-4">
-              <Checkbox class="items-center" id="terms" />
-              <Label for="DoNotDisclose">Do Not Disclose</Label>
+            <div class="flex flex-row items-center mb-4">
+              <Checkbox  id="terms" />
+              <Label class="ml-4" for="DoNotDisclose">Do Not Disclose</Label>
             </div>
 
-            <div class="flex flex-row mb-4">
-              <Checkbox id="terms" />
-              <Label for="DoNotDisclose">Make complainer info hidden</Label>
+            <div class="flex flex-row mb-4 items-center ">
+              <Checkbox id="terms"/>
+              <Label class="ml-4" for="DoNotDisclose">Make complainer info hidden</Label>
             </div>
 
-            <div class="flex flex-row mb-4">
+            <div class="flex flex-row items-center  mb-4">
               <Checkbox id="terms" />
-              <Label for="DoNotDisclose"
+              <Label class="ml-4" for="DoNotDisclose"
                 >Secure this Complaint with a Password (Required for
                 Tracking)*</Label
               >
