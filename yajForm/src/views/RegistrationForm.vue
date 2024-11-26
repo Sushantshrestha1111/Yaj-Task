@@ -164,6 +164,52 @@
                     <Textarea placeholder="Type your message here." />
 
                    </div>
+<!-- Complaint Servicity -->
+                   <div>
+                    <Label for="ComplaintServivity">Complaint Servicity *</Label>
+                    <RadioGroup default-value="comfortable">
+                      <div class="flex flex-row">
+                        <div class="flex  flex-row items-center space-x-2">
+      <RadioGroupItem id="r1" value="default" />
+      <Label for="r1">Default</Label>
+    </div>
+    <div class="flex items-center space-x-2">
+      <RadioGroupItem id="r2" value="comfortable" />
+      <Label for="r2">Comfortable</Label>
+    </div>
+    <div class="flex items-center space-x-2">
+      <RadioGroupItem id="r3" value="compact" />
+      <Label for="r3">Compact</Label>
+    </div>
+                      </div>
+   
+  </RadioGroup>
+
+                  
+                   </div>
+
+                   <!-- Random checkBox -->
+
+                   <div> 
+                    <div class="flex flex-row ">
+
+                      <Checkbox id="terms" />
+                      <Label for="DoNotDisclose">Do Not Disclose</Label>
+                    </div>
+
+                    <div class="flex flex-row ">
+
+<Checkbox id="terms" />
+<Label for="DoNotDisclose">Make complainer info hidden</Label>
+</div>
+
+<div class="flex flex-row ">
+
+<Checkbox id="terms" />
+<Label for="DoNotDisclose">Secure this Complaint with a Password (Required for Tracking)*</Label>
+</div>
+                    
+                  </div>
 
 
 
@@ -182,6 +228,7 @@
   import YellowBanner from "../components/YellowBanner.vue";
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import { Checkbox } from '@/components/ui/checkbox'
   import {
   Select,
   SelectContent,
@@ -191,6 +238,7 @@ import { Textarea } from '@/components/ui/textarea'
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
   </script>
   
   <style scoped>
