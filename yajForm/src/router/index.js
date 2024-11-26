@@ -5,10 +5,15 @@ const router = createRouter({
   routes: [
    
     
+    // {
+    //   path:'/',
+    //   name:'main',
+    //   component:()=>import('../views/Main.vue')
+    // },
     {
       path:'/',
       name:'main',
-      component:()=>import('../views/Main.vue')
+      component:()=>import('../views/RegistrationForm.vue')
     },
    
   ],
