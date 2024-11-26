@@ -15,6 +15,11 @@ const router = createRouter({
       name:'main',
       component:()=>import('../views/RegistrationForm.vue')
     },
+    {
+      path:'/secondform',
+      name:'second',
+      component:()=>import('../views/SecondForm.vue')
+    }
    
   ],
 })
