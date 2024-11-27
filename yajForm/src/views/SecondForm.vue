@@ -13,35 +13,66 @@
 
     <div class="flex flex-col pl-5 justify-center w-full mt-6">
       <!-- form Begins from here -->
-      <div
-        class="flex relative p-5 w-full min-w-[855px] justify-center"
-      >
-        
+      <div class="flex flex-row item">
+        <!-- This is the uppercircles -->
+         <div class="flex flex-col items-center ">
 
-        <!-- form Begins from here -->
-        <div class="flex flex-col ml-4 w-1/2">
-            <div class="flex flex-row mb-4">
-          <div
+        <div class="flex flex-row">
+
+          <div class="flex flex-col">
+            <!-- circle 1 -->
+            <div
             class="bg-blue-100 flex -ml-12 rounded-full w-10 h-10 items-center justify-center"
           >
             <strong>1</strong>
            
           </div>
-          <span class="text-blue-500 ml-4 text-[24px]">Complain Details</span>
-          
+  
+          <!-- line -->
+           <div class="w-[2px] h-[20px] mr-12 bg-blue-400"></div>
+  
+           <!-- circle 2 -->
+           <div
+            class="bg-blue-100 flex -ml-12 rounded-full w-10 h-10 items-center justify-center"
+          >
+            <strong>1</strong>
+           
+          </div>
+ 
+ 
+          </div>
+          <!-- text -->
+          <div class="flex flex-col">
+           <span class="text-blue-500 ml-4 text-[24px]">Complain Details</span>
+         <span class=" mt-5 ml-4 text-[24px]">Personal Details</span>
+         </div>
         </div>
+        
 
-        <div class="flex flex-row mb-4">
-            <div class="bg-white border-2 border-blue-500 flex -ml-12 rounded-full w-10 h-10 items-center justify-center">
-  <strong>1</strong>
-</div>
+         </div>
 
-          <span class="  ml-4 text-[24px]">Personal Details</span>
+         
+
+         
+
+      </div>
+        
+      <div
+        class="flex relative p-5 w-full min-w-[855px] justify-center"
+      >
+
+     
+
+        <!-- form Begins from here -->
+        <div class="flex flex-col ml-4 w-1/2">
+            
+ <div class="flex flex-row mb-4">
+            
           
         </div>
        
 
-         
+       
          
           <!-- Name of User -->
           <div class="mb-4">

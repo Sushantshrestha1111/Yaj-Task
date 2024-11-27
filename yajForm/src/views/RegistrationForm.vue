@@ -16,12 +16,16 @@
     <div
       class="flex flex-row relative p-5 w-full min-w-[855px] justify-center"
     >
-      <div class="flex flex-col">
-        <div class="bg-white border-2 border-blue-500 text-blue-500 flex -ml-12 rounded-full w-10 h-10 items-center justify-center">
-  <strong>1</strong>
-</div>
+     
+        <div class="flex flex-col">
+          <div class="bg-white border-2 border-blue-500 text-blue-500 flex rounded-full w-10 h-10 items-center justify-center">
+            <strong>1</strong>
+           </div>
+           <div class="mt-4 w-1 h-full items-center justify-center ml-4 bg-blue-400"></div>
+        </div>
+        
 
-      </div>
+     
 
       <!-- form Begins from here -->
       <div class="flex flex-col ml-4 w-1/2">
@@ -258,6 +262,7 @@
         
         
       </div>
+
     </div>
   </div>
   </div>
