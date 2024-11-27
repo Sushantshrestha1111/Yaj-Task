@@ -1,35 +1,36 @@
 <template>
-  <div class="flex flex-col w-full items-center justify-start bg-blue-50 min-h-screen pt-10 overflow-hidden">
+  <div class="flex flex-col w-full  items-center justify-start bg-blue-50 min-h-screen pt-10 overflow-hidden">
+
     <div
-      class="bg-cover flex r mt-64 bg-center opacity-15 absolute"
-      style="width: 500px; z-index:0  ;height: 345px; background-image: url('/BackGround.svg');"
-    >
+        class="bg-cover flex justify-center mt-64 items-center bg-center opacity-5 absolute"
+        style="width: 500px; z-index:0  ;height: 345px; background-image: url('/BackGround.svg');"
+      >
    
     
     </div>
     <span class="text-2xl">
-    <strong><h2 class="text-[32px] font-Satoshi">Complain Registration </h2></strong>
+    <strong><h2 class="text-[32px] text-[#444444] font-Satoshi">Complain Registration </h2></strong>
   </span>
 
-  <div class="flex flex-row justify-center w-full mt-6">
+  <div class="flex flex-row  justify-center  w-full mt-6">
     <!-- form Begins from here -->
     <div
       class="flex flex-row relative p-5 w-full min-w-[855px] justify-center"
     >
      
         <div class="flex flex-col">
-          <div class="bg-white border-2 border-blue-500 text-blue-500 flex rounded-full w-10 h-10 items-center justify-center">
+          <div class="bg-white border-2 border-blue-500 text-blue-500 flex rounded-full w-9 h-9 items-center justify-center">
             <strong>1</strong>
            </div>
-           <div class="mt-4 w-1 h-full items-center justify-center ml-4 bg-blue-400"></div>
+           <div class=" w-1 h-full items-center justify-center ml-4 bg-blue-100"></div>
         </div>
         
 
      
 
       <!-- form Begins from here -->
-      <div class="flex flex-col ml-4 w-1/2">
-        <h1 class="text-xl mb-6 text-[24px]">
+      <div class="flex flex-col ml-4 min-w-[900px]">
+        <h1 class="text-[#222222] font-satoshi mb-6 text-[24px] font-medium">
           Complain Details
         </h1>
 
@@ -39,122 +40,135 @@
 
         <div class="flex flex-col l-0 mb-4 mt-4 r-0 w-full">
          <div class="flex">
-          <span class="block mb-2 text-gray-400 font-medium"
+          <span class="block mb-2  text-[#777777] font-medium"
             >Nature of Problem  </span
-          ><span class="text-red-500">*</span>
+          ><span class="text-red-500 ml-1">*</span>
          </div>
 
          <div class="w-full">
           
-          <select
-            id="options"
-            v-model="selectedOption"
-            class="block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-          >
-            <option class="text-gray-400" disabled value=""><span>Select a Nature of Problem</span></option>
-            <option v-for="option in options" :key="option.value" :value="option.value">
-              {{ option.label }}
-            </option>
-          </select>
+          <div class="relative w-full">
+  <select
+    id="options"
+    v-model="selectedOption"
+    class="block w-full px-3 h-[46px] text-[#A0A0A0] pr-10 py-2 border border-[#E9E9E9] bg-white rounded-md appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+  >
+    <option class="text-black" disabled value="">Select a Nature of Problem</option>
+    <option v-for="option in options" :key="option.value" :value="option.value">
+      {{ option.label }}
+    </option>
+  </select>
+  <!-- Custom arrow -->
+  <span class="absolute inset-y-0 right-3 flex text-[#444444] items-center pointer-events-none">
+    <img :src="down" alt="">
+  </span>
+</div>
+
           
         </div>
         </div>
         <!-- Name of Office -->
         <div class="mb-4">
-          <span class="text-gray-400 mb-2">Name of Office</span>
+          <span class="text-[#777777] mb-2">Name of Office</span>
          
           <input
           id="OfficeName"
           type="text"
           v-model="inputValue"
-          placeholder="Enter Name of Office"
-          class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          placeholder="Enter office name"
+          class="block w-full h-[46px] px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
         />
         </div>
 
         <!--  office Addresss-->
-        <span class="text-gray-400 font-normal">Office Address</span>
-        <div class="flex flex-col md:flex-row mb-4 w-full">
+        <span class="text-[#777777] font-normal">Office Address:</span>
+        <div class="flex flex-col md:flex-row mb-4 w-full gap-3">
 <!-- State -->
 <div class="flex flex-col flex-1 gap-x-4">
   <span class="text-gray-400">State</span>
-  <div class="w-full">
-          
-    <select
-      id="options"
-      v-model="selectedOption"
-      class="block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-    >
-      <option class="text-gray-400" disabled value=""><span>Select State</span></option>
-      <option v-for="option in options" :key="option.value" :value="option.value">
-        {{ option.label }}
-      </option>
-    </select>
-    
-  </div>
+  <div class="relative w-full">
+  <select
+    id="options"
+    v-model="selectedOption"
+    class="block w-full px-3 h-[46px] text-[#A0A0A0] pr-10 py-2 border border-[#E9E9E9] bg-white rounded-md appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+  >
+    <option class="text-black" disabled value="">Select State</option>
+    <option v-for="option in options" :key="option.value" :value="option.value">
+      {{ option.label }}
+    </option>
+  </select>
+  <!-- Custom arrow -->
+  <span class="absolute inset-y-0 right-3 flex text-[#444444] items-center pointer-events-none">
+    <img :src="down" alt="">
+  </span>
+</div>
 </div>
 <!-- District -->
 <div class="flex flex-col flex-1 gap-x-4">
   <span class="text-gray-400">District</span>
-  <div class="w-full">
-          
-    <select
-      id="options"
-      v-model="selectedOption"
-      class="block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-    >
-      <option class="text-gray-400" disabled value=""><span>Select District</span></option>
-      <option v-for="option in options" :key="option.value" :value="option.value">
-        {{ option.label }}
-      </option>
-    </select>
-    
-  </div>
+  <div class="relative w-full">
+  <select
+    id="options"
+    v-model="selectedOption"
+    class="block w-full px-3 h-[46px] text-[#A0A0A0] pr-10 py-2 border border-[#E9E9E9] bg-white rounded-md appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+  >
+    <option class="text-black" disabled value="">Select District</option>
+    <option v-for="option in options" :key="option.value" :value="option.value">
+      {{ option.label }}
+    </option>
+  </select>
+  <!-- Custom arrow -->
+  <span class="absolute inset-y-0 right-3 flex text-[#444444] items-center pointer-events-none">
+    <img :src="down" alt="">
+  </span>
+</div>
 </div>
 <!-- Municipality -->
 <div class="flex flex-col flex-1 gap-x-4">
-  <span class="text-gray-400">Municipality</span>
-  <div class="w-full">
-          
-    <select
-      id="options"
-      v-model="selectedOption"
-      class="block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-    >
-      <option class="text-gray-400" disabled value=""><span>Select Muncipility</span></option>
-      <option v-for="option in options" :key="option.value" :value="option.value">
-        {{ option.label }}
-      </option>
-    </select>
-    
-  </div>
+  <span class="text-gray-400">Select Municipality</span>
+  <div class="relative w-full">
+  <select
+    id="options"
+    v-model="selectedOption"
+    class="block w-full px-3 h-[46px] text-[#A0A0A0] pr-10 py-2 border border-[#E9E9E9] bg-white rounded-md appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+  >
+    <option class="text-black" disabled value="">Select a Nature of Problem</option>
+    <option v-for="option in options" :key="option.value" :value="option.value">
+      {{ option.label }}
+    </option>
+  </select>
+  <!-- Custom arrow -->
+  <span class="absolute inset-y-0 right-3 flex text-[#444444] items-center pointer-events-none">
+    <img :src="down" alt="">
+  </span>
+</div>
 </div>
 </div>
 
 
         <!-- Ward No -->
 
-        <div class="flex flex-col md:flex-row mb-4 w-full mb-4">
+        <div class="flex flex-col md:flex-row gap-3 w-full mb-4">
 <!-- Ward No. -->
-<div class="flex flex-col flex-1">
-  <span class="text-gray-400">Ward No.</span>
+<div class="flex flex-col flex-1 ">
+  <span class="text-[#777777]">Ward No.</span>
   <input
   id="WardNo"
   type="text"
   v-model="inputValue"
   placeholder="Enter Ward No."
-  class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+  class="block w-full px-3 py-2 border h-[46px] border-[#E9E9E9] rounded-md  focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
 />
 </div>
 <!-- Street Address -->
 <div class="flex flex-col flex-1">
-  <span class="text-gray-400">Street Address</span>
+  <span class="text-[#777777]">Street Address</span>
   <input
   id="StreetAddress"
   type="text"
   v-model="inputValue"
   placeholder="Enter Street Address"
-  class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+  class="block w-full px-3 py-2 border h-[46px] border-[#E9E9E9] rounded-md  focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
 />
 </div>
 </div>
@@ -162,20 +176,32 @@
 
         <!-- Related Documents -->
         <div class="mb-4">
-          <span></span>
+          <Label class="text-[#777777] mb-2" for="Description">Delated Document (if any)</Label>
+
+          <input
+        ref="fileInput"
+        type="file"
+        id="file-upload"
+        class="hidden"
+        @change="handleFileChange"
+      />
+      <div class="h-[80px] bg-white border-[#E9E9E9] border-2 border-dashed flex items-center justify-center">
+  <span class="text-[#444444] text-center">Drop your file here or click to upload from your computer.</span>
+</div>
+
         </div>
 
         <!-- Brief Description of complaint * -->
         <div class="flex flex-col mb-4">
-          <Label class="text-gray-400 mb-2" for="Description">Brief Description of complaint <span class="text-red-500">*</span></Label>
+          <Label class="text-[#777777] mb-2" for="Description">Brief Description of complaint <span class="text-red-500">*</span></Label>
           
           <div class="w-full">
             
             <textarea
               id="message"
               v-model="message"
-              placeholder="Type your message here"
-              class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm resize-none"
+              placeholder="Enter your complaint"
+              class="block w-full px-3 py-2 border h-[120px] border-[#E9E9E9] rounded-md  focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm resize-none"
               rows="5"
             ></textarea>
             
@@ -188,7 +214,7 @@
 
 <div>
   
-  <div class="flex flex-row mt-4 gap-x-4 w-full">
+  <div class="flex flex-row mt-4 gap-x-6 w-full">
     <!-- Common -->
     <div class="flex flex-row items-center space-x-2 flex-1">
       <input
@@ -198,7 +224,7 @@
         v-model="selectedPriority"
         class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
       />
-      <label for="r1" class="text-sm font-medium text-gray-700">Common</label>
+      <label for="r1" class="font-[16px] text-[#444444]">Common</label>
     </div>
     <!-- Important -->
     <div class="flex flex-row items-center space-x-2 flex-1">
@@ -209,7 +235,7 @@
         v-model="selectedPriority"
         class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
       />
-      <label for="r2" class="text-sm font-medium text-gray-700">Important</label>
+      <label for="r2" class="font-[16px] text-[#444444]">Important</label>
     </div>
     <!-- Very Important -->
     <div class="flex flex-row items-center space-x-2 flex-1">
@@ -220,7 +246,7 @@
         v-model="selectedPriority"
         class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
       />
-      <label for="r3" class="text-sm font-medium text-gray-700">Very Important</label>
+      <label for="r3" class="font-[16px] text-[#444444] ">Very Important</label>
     </div>
   </div>
   
@@ -232,21 +258,22 @@
         <!-- Random checkBox -->
 
         <div>
-          <div class="flex flex-row items-center mb-4">
+          <div class="flex flex-row items-center mb-6">
            
-            <input type="checkbox">
-            <label class="ml-4" for="DoNotDisclose">Do Not Disclose</label>
+            <input class="h-4 w-4" type="checkbox">
+
+            <label class="ml-4 font-[16px] text-[#444444]" for="DoNotDisclose">Do Not Disclose</label>
             
           </div>
 
-          <div class="flex flex-row mb-4 items-center ">
-            <input type="checkbox">
-            <label class="ml-4" for="DoNotDisclose">Make complainer info hidden</label>
+          <div class="flex flex-row mb-6 items-center ">
+            <input class="h-4 w-4" type="checkbox">
+            <label class="ml-4 font-[16px] text-[#444444]" for="DoNotDisclose">Make complainer info hidden</label>
           </div>
 
-          <div class="flex flex-row items-center  mb-4">
-            <input type="checkbox">
-            <label class="ml-4" for="DoNotDisclose"
+          <div class="flex flex-row items-center  mb-6">
+            <input class="h-4 w-4" type="checkbox">
+            <label class="ml-4 font-[16px] text-[#444444]" for="DoNotDisclose"
               >Secure this Complaint with a Password (Required for
               Tracking) <span class="text-red-500">*</span></label
             >
@@ -277,11 +304,18 @@ const selectedPriority = ref("comfortable"); // Default value for checkbox
 
 // options ofr select
 const selectedOption = ref("");
+const selectState =ref("");
+const states= ref([
+  { label: "state 1", value: "option1" },
+  { label: "state2", value: "option2" },
+  { label: "Option 3", value: "option3" },
+]);
 const options = ref([
   { label: "Option 1", value: "option1" },
   { label: "Option 2", value: "option2" },
   { label: "Option 3", value: "option3" },
 ]);
+import down from '../assets/images/down-arrow.svg'
 </script>
 
 

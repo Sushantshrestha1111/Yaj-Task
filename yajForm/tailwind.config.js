@@ -19,6 +19,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Satoshi', 'sans-serif'], // Default sans-serif with Satoshi
+        satoshi: ['Satoshi', 'sans-serif'], // Separate Satoshi class
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
