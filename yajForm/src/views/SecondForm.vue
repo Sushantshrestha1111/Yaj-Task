@@ -46,7 +46,13 @@
           <!-- Name of User -->
           <div class="mb-4">
             <Label class="text-gray-400 mb-4">Full Name <span class="text-red-500">*</span></Label>
-            <Input type="text" placeholder="Enter Full Name" />
+            <input
+            id="FullName"
+            type="text"
+            v-model="inputValue"
+            placeholder="Enter Full Name"
+            class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          />
             
           </div>
 
@@ -55,59 +61,56 @@
   <!-- State -->
   <div class="flex flex-col flex-1">
     <span class="text-gray-400">State</span>
-    <Select>
-      <SelectTrigger class="w-full">
-        <SelectValue placeholder="Select State" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectLabel>Options</SelectLabel>
-          <SelectItem value="1"> op1 </SelectItem>
-          <SelectItem value="2"> opt 2 </SelectItem>
-          <SelectItem value="3"> opt 3 </SelectItem>
-          <SelectItem value="4"> opt 4</SelectItem>
-          <SelectItem value="5">opt 5 </SelectItem>
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+    <div class="w-full">
+          
+      <select
+        id="options"
+        v-model="selectedOption"
+        class="block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+      >
+        <option class="text-gray-400" disabled value=""><span>Select State</span></option>
+        <option v-for="option in options" :key="option.value" :value="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+      
+    </div>
   </div>
   <!-- District -->
   <div class="flex flex-col flex-1 ml">
     <span class="text-gray-400">District</span>
-    <Select>
-      <SelectTrigger class="w-full">
-        <SelectValue placeholder="Select a district" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectLabel>Options</SelectLabel>
-          <SelectItem value="1"> op1 </SelectItem>
-          <SelectItem value="2"> opt 2 </SelectItem>
-          <SelectItem value="3"> opt 3 </SelectItem>
-          <SelectItem value="4"> opt 4</SelectItem>
-          <SelectItem value="5">opt 5 </SelectItem>
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+    <div class="w-full">
+          
+      <select
+        id="options"
+        v-model="selectedOption"
+        class="block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+      >
+        <option class="text-gray-400" disabled value=""><span>Select District</span></option>
+        <option v-for="option in options" :key="option.value" :value="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+      
+    </div>
   </div>
   <!-- Municipality -->
   <div class="flex flex-col flex-1">
     <span class="text-gray-400">Municipality</span>
-    <Select>
-      <SelectTrigger class="w-full">
-        <SelectValue placeholder="Select a Muncipility" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectLabel>Options</SelectLabel>
-          <SelectItem value="1"> op1 </SelectItem>
-          <SelectItem value="2"> opt 2 </SelectItem>
-          <SelectItem value="3"> opt 3 </SelectItem>
-          <SelectItem value="4"> opt 4</SelectItem>
-          <SelectItem value="5">opt 5 </SelectItem>
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+    <div class="w-full">
+          
+      <select
+        id="options"
+        v-model="selectedOption"
+        class="block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+      >
+        <option class="text-gray-400" disabled value="">Select Muncipility</option>
+        <option v-for="option in options" :key="option.value" :value="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+      
+    </div>
   </div>
 </div>
 
@@ -118,22 +121,46 @@
   <!-- Ward No. -->
   <div class="flex flex-col flex-1">
     <span class="text-gray-400">Ward No.</span>
-    <Input type="text" placeholder="Enter Ward No." />
+    <input
+          id="WardNo"
+          type="text"
+          v-model="inputValue"
+          placeholder="Enter Ward No."
+          class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+        />
   </div>
   <!-- Street Address -->
   <div class="flex flex-col flex-1 ">
     <span class="text-gray-400">Street Address</span>
-    <Input type="text" placeholder="Enter Street Address" />
+    <input
+          id="StateAddress"
+          type="text"
+          v-model="inputValue"
+          placeholder="Enter Streat Address"
+          class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+        />
   </div>
 
 </div>
 <div class="mb-4">
             <Label class="text-gray-400 mb-4">Mobile Number <span class="text-red-500">*</span></Label>
-            <Input type="text" placeholder="Enter Mobile Number" />
+            <input
+            id="MobileNUmber"
+            type="text"
+            v-model="inputValue"
+            placeholder="Enter MobileNumber"
+            class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          />
           </div>
           <div class="mb-4">
             <Label class="text-gray-400 mb-4">Email Email Address</Label>
-            <Input type="text" placeholder="Enter Email Address" />
+            <input
+            id="email"
+            type="email"
+            v-model="inputValue"
+            placeholder="Enter your Email"
+            class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          />
           </div>
 
 
@@ -147,11 +174,11 @@
 
             <RouterLink to="/">
             
-              <Button class="text-blue-500 m-5 bg-white border-blue">Go Back</Button>
+              <Button class="text-blue-500 m-5 h-10 p-2 rounded-md bg-white border-blue">Go Back</Button>
 
             </RouterLink>
             <RouterLink to="/secondform">
-              <Button class="bg-blue-500 m-5 text-white">Procede to next page</Button>
+              <Button class="bg-blue-500 m-5 h-10 p-2 rounded-md text-white">Procede to next page</Button>
              
 
             </RouterLink>
@@ -167,24 +194,23 @@
   
   <script setup>
   import YellowBanner from "../components/YellowBanner.vue";
-  import { Input } from "@/components/ui/input";
-  import { Button } from '@/components/ui/button'
-  import { Textarea } from "@/components/ui/textarea";
-  import { Checkbox } from "@/components/ui/checkbox";
-  import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectLabel,
-    SelectTrigger,
-    SelectValue,
-  } from "@/components/ui/select";
+ 
+ 
+
+  import { ref } from "vue";
+
+
+const selectedOption = ref("");
+const options = ref([
+  { label: "Option 1", value: "option1" },
+  { label: "Option 2", value: "option2" },
+  { label: "Option 3", value: "option3" },
+]);
   import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
   </script>
   
   
   <style scoped>
-  /* Additional styles specific to this component */
+
   </style>
   
