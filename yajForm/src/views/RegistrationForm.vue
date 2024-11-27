@@ -17,11 +17,10 @@
       class="flex flex-row relative p-5 w-full min-w-[855px] justify-center"
     >
       <div class="flex flex-col">
-        <div
-          class="bg-blue-100 flex rounded-full w-10 h-10 items-center justify-center"
-        >
-          <strong>1</strong>
-        </div>
+        <div class="bg-white border-2 border-blue-500 text-blue-500 flex -ml-12 rounded-full w-10 h-10 items-center justify-center">
+  <strong>1</strong>
+</div>
+
       </div>
 
       <!-- form Begins from here -->
@@ -69,15 +68,15 @@
         </div>
         <!-- Name of Office -->
         <div class="mb-4">
-          <span class="text-gray-400 mb-4">Name of Office</span>
+          <span class="text-gray-400 mb-2">Name of Office</span>
           <Input type="text" placeholder="Enter office name" />
         </div>
 
         <!--  office Addresss-->
         <span class="text-gray-400 font-normal">Office Address</span>
-        <div class="flex flex-col md:flex-row mb-4 w-full gap-x-4">
+        <div class="flex flex-col md:flex-row mb-4 w-full">
 <!-- State -->
-<div class="flex flex-col flex-1">
+<div class="flex flex-col flex-1 gap-x-4">
   <span class="text-gray-400">State</span>
   <Select>
     <SelectTrigger class="w-full">
@@ -96,7 +95,7 @@
   </Select>
 </div>
 <!-- District -->
-<div class="flex flex-col flex-1">
+<div class="flex flex-col flex-1 gap-x-4">
   <span class="text-gray-400">District</span>
   <Select>
     <SelectTrigger class="w-full">
@@ -115,7 +114,7 @@
   </Select>
 </div>
 <!-- Municipality -->
-<div class="flex flex-col flex-1">
+<div class="flex flex-col flex-1 gap-x-4">
   <span class="text-gray-400">Municipality</span>
   <Select>
     <SelectTrigger class="w-full">
@@ -138,7 +137,7 @@
 
         <!-- Ward No -->
 
-        <div class="flex flex-col md:flex-row mb-4 w-full gap-x-4">
+        <div class="flex flex-col md:flex-row mb-4 w-full mb-4">
 <!-- Ward No. -->
 <div class="flex flex-col flex-1">
   <span class="text-gray-400">Ward No.</span>
@@ -159,7 +158,7 @@
 
         <!-- Brief Description of complaint * -->
         <div class="flex flex-col mb-4">
-          <Label class="text-gray-400 mb-4" for="Description">Brief Description of complaint <span class="text-red-500">*</span></Label>
+          <Label class="text-gray-400 mb-2" for="Description">Brief Description of complaint <span class="text-red-500">*</span></Label>
           <Textarea placeholder="Type your message here." />
         </div>
         <!-- Complaint Servicity -->
@@ -170,17 +169,17 @@
 <div class="flex flex-row mt-4 gap-x-4 w-full">
   <!-- Common -->
   <div class="flex flex-row items-center space-x-2 flex-1">
-    <RadioGroupItem id="r1" value="default" />
+    <RadioGroupItem class="text-blue-500" id="r1" value="default" />
     <Label for="r1">Common</Label>
   </div>
   <!-- Important -->
   <div class="flex flex-row items-center space-x-2 flex-1">
-    <RadioGroupItem id="r2" value="comfortable" />
+    <RadioGroupItem class="text-blue-500" id="r2" value="comfortable" />
     <Label for="r2">Important</Label>
   </div>
   <!-- Very Important -->
   <div class="flex flex-row items-center space-x-2 flex-1">
-    <RadioGroupItem id="r3" value="compact" />
+    <RadioGroupItem class="text-blue-500" id="r3" value="compact" />
     <Label for="r3">Very Important</Label>
   </div>
 </div>
@@ -210,9 +209,9 @@
             >
           </div>
         </div>
-        <div class="flex l-0">
+        <div class="flex items-end justify-end">
           <RouterLink to="/secondform">
-            <Button>Procede to next page</Button>
+            <Button class="bg-blue-500 text-white">Procede to next page</Button>
 
           </RouterLink>
           

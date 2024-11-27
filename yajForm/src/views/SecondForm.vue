@@ -11,27 +11,43 @@
       <strong><h2 class="text-[32px] font-Satoshi">Complain Registration </h2></strong>
     </span>
 
-    <div class="flex flex-row pl-5 justify-center w-full mt-6">
+    <div class="flex flex-col pl-5 justify-center w-full mt-6">
       <!-- form Begins from here -->
       <div
-        class="flex flex-row relative p-5 w-full min-w-[855px] justify-center"
+        class="flex relative p-5 w-full min-w-[855px] justify-center"
       >
-        <div class="flex flex-col">
-          <div
-            class="bg-blue-100 flex rounded-full w-10 h-10 items-center justify-center"
-          >
-            <strong>1</strong>
-          </div>
-        </div>
+        
 
         <!-- form Begins from here -->
         <div class="flex flex-col ml-4 w-1/2">
+            <div class="flex flex-row mb-4">
+          <div
+            class="bg-blue-100 flex -ml-12 rounded-full w-10 h-10 items-center justify-center"
+          >
+            <strong>1</strong>
+           
+          </div>
+          <span class="text-blue-500 ml-4 text-[24px]">Complain Details</span>
+          
+        </div>
+
+        <div class="flex flex-row mb-4">
+            <div class="bg-white border-2 border-blue-500 flex -ml-12 rounded-full w-10 h-10 items-center justify-center">
+  <strong>1</strong>
+</div>
+
+          <span class="  ml-4 text-[24px]">Personal Details</span>
+          
+        </div>
+       
+
          
          
-          <!-- Name of Office -->
+          <!-- Name of User -->
           <div class="mb-4">
             <Label class="text-gray-400 mb-4">Full Name <span class="text-red-500">*</span></Label>
             <Input type="text" placeholder="Enter Full Name" />
+            
           </div>
 
           <!-- Addresss-->
@@ -56,7 +72,7 @@
     </Select>
   </div>
   <!-- District -->
-  <div class="flex flex-col flex-1">
+  <div class="flex flex-col flex-1 ml">
     <span class="text-gray-400">District</span>
     <Select>
       <SelectTrigger class="w-full">
@@ -98,14 +114,14 @@
 
           <!-- Ward No -->
 
-          <div class="flex flex-col md:flex-row mb-4 w-full gap-x-4">
+          <div class="flex flex-col md:flex mb-4 w-full gap-x-4 gap-y-6">
   <!-- Ward No. -->
   <div class="flex flex-col flex-1">
     <span class="text-gray-400">Ward No.</span>
     <Input type="text" placeholder="Enter Ward No." />
   </div>
   <!-- Street Address -->
-  <div class="flex flex-col flex-1">
+  <div class="flex flex-col flex-1 ">
     <span class="text-gray-400">Street Address</span>
     <Input type="text" placeholder="Enter Street Address" />
   </div>
@@ -127,9 +143,16 @@
         
 
 
-          <div class="flex l-0">
+          <div class="flex justify-end ">
+
+            <RouterLink to="/">
+            
+              <Button class="text-blue-500 m-5 bg-white border-blue">Go Back</Button>
+
+            </RouterLink>
             <RouterLink to="/secondform">
-              <Button>Procede to next page</Button>
+              <Button class="bg-blue-500 m-5 text-white">Procede to next page</Button>
+             
 
             </RouterLink>
             
