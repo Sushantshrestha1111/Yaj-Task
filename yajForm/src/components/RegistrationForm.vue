@@ -3,7 +3,7 @@
         this is refsadf
     </div>
     <div>
-        <span class="text-black">hello</span>
+        <span class="text-[]">hello</span>
     </div>
 </template>
 <script setup>
