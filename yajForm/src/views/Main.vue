@@ -36,7 +36,7 @@
           <div class="flex flex-row justify-center w-full mt-6">
             <!-- form Begins from here -->
             <div
-              class="flex flex-row relative p-5 w-full min-w-[855px] justify-center"
+              class="flex flex-row relative p-5 w-full md:min-w-[855px] justify-center"
             >
               <div class="flex flex-col">
                 <div
@@ -58,7 +58,7 @@
               </div>
 
               <!-- form Begins from here -->
-              <div class="flex flex-col ml-4 min-w-[900px]">
+              <div class="flex flex-col ml-4  md:min-w-[900px]">
                 <h1
                   class="text-[#222222] font-satoshi mb-6 text-[24px] font-medium"
                 >
@@ -250,20 +250,23 @@
                     >Delated Document (if any)</Label
                   >
 
-                  <input
-                    ref="fileInput"
-                    type="file"
-                    id="file-upload"
-                    class="hidden"
-                    @change="handleFileChange"
-                  />
+                 
                   <div
                     class="h-[80px] bg-white border-[#E9E9E9] border-2 border-dashed flex items-center justify-center"
                   >
                     <span class="text-[#444444] text-center"
                       >Drop your file here or click to upload from your
                       computer.</span
+                      
                     >
+                    <input
+                    ref="fileInput"
+                    type="file"
+                    id="file-upload"
+                    class="absolute inset-0 opacity-0 cursor-pointer"
+                    
+                    @change="handleFileChange"
+                  />
                   </div>
                 </div>
 
@@ -394,7 +397,7 @@
     >
       <div class="flex flex-col pl-5 justify-center w-full">
         <!-- Complain Registration Form -->
-        <div class="flex flex-col ml-4 min-w-[900px]">
+        <div class="flex flex-col ml-4 md:min-w-[900px]">
           <div
             class="flex flex-col w-full items-center justify-start bg-blue-50 min-h-screen pt-10"
           >
@@ -410,10 +413,10 @@
               <!-- form Begins from here -->
 
               <div
-                class="flex relative p-5 w-full min-w-[855px] justify-center"
+                class="flex relative p-5 w-full md:min-w-[855px] justify-center"
               >
                 <!-- form Begins from here -->
-                <div class="flex flex-col ml-4 min-w-[900px]">
+                <div class="flex flex-col ml-4 md:min-w-[900px]">
                   <div class="flex flex-row items-center">
                     <!-- This is the uppercircles -->
                     <div class="flex flex-col items-center">
