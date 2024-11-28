@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col w-full items-center justify-start bg-blue-50 min-h-screen pt-10"
+    class="flex flex-col w-full items-center justify-start bg-blue-50 min-h-screen pt-10 overflow-hidden"
   >
     <div
       class="bg-cover flex justify-center mt-64 items-center bg-center opacity-5 absolute"
@@ -20,9 +20,9 @@
     <div class="flex flex-col pl-5 justify-center w-full mt-6">
       <!-- form Begins from here -->
 
-      <div class="flex relative p-5 w-full min-w-[855px] justify-center">
+      <div class="flex relative p-5 w-full min-w-[900px] justify-center">
         <!-- form Begins from here -->
-        <div class="flex flex-col ml-4 w-1/2">
+        <div class="flex flex-col ml-4 min-w-[900px]">
           <div class="flex flex-row items-center">
             <!-- This is the uppercircles -->
             <div class="flex flex-col items-center">
@@ -242,7 +242,7 @@
             </RouterLink>
             <RouterLink to="/secondform">
               <Button class="bg-blue-500 m-5 h-10 p-2 rounded-md text-white"
-                >Procede to next page</Button
+                >Submit Form</Button
               >
             </RouterLink>
           </div>
@@ -253,7 +253,7 @@
 </template>
 
 <script setup>
-import YellowBanner from "../components/YellowBanner.vue";
+
 
 import down from "../assets/images/down-arrow.svg";
 import check from "../assets/images/check.svg";
