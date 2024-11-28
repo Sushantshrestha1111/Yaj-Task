@@ -246,28 +246,26 @@
 
                 <!-- Related Documents -->
                 <div class="mb-4">
-                  <Label class="text-[#777777] mb-2" for="Description"
-                    >Delated Document (if any)</Label
+                  <Label class="text-[#777777] mb-1" for="Description"
+                    >Related Document (if any)</Label
                   >
 
                  
                   <div
-                    class="h-[80px] bg-white border-[#E9E9E9] border-2 border-dashed flex items-center justify-center"
-                  >
-                    <span class="text-[#444444] text-center"
-                      >Drop your file here or click to upload from your
-                      computer.</span
-                      
-                    >
-                    <input
-                    ref="fileInput"
-                    type="file"
-                    id="file-upload"
-                    class="absolute inset-0 opacity-0 cursor-pointer"
-                    
-                    @change="handleFileChange"
-                  />
-                  </div>
+  class="h-[80px] bg-white border-[#E9E9E9] border-2 border-dashed flex items-center justify-center cursor-pointer relative"
+  @click="triggerFileUpload"
+>
+  <span class="text-[#444444] text-center">
+    Drop your file here or click to upload from your computer.
+  </span>
+  <input
+    ref="fileInput"
+    type="file"
+    id="file-upload"
+    @change="handleFileChange"
+    class="absolute inset-0 opacity-0 cursor-pointer"
+  />
+</div>
                 </div>
 
                 <!-- Brief Description of complaint * -->
@@ -639,9 +637,12 @@
                     >
 
                     <Button
-                      class="bg-blue-500 m-5 h-10 p-2 rounded-md text-white"
-                      >Submit Form</Button
-                    >
+  class="bg-blue-500 m-5 h-10 p-2 rounded-md text-white"
+  @click="handleSubmit"
+>
+  Submit Form
+</Button>
+
                   </div>
                 </div>
               </div>
@@ -657,38 +658,53 @@
 import YellowBanner from "../components/YellowBanner.vue";
 import down from "../assets/images/down-arrow.svg";
 import check from "../assets/images/check.svg";
-import line from "../assets/images/line.svg"
-;
-import two from "../assets/images/two.svg"
+import line from "../assets/images/line.svg";
+import two from "../assets/images/two.svg";
 import { ref } from "vue";
 
-const currentStep = ref(1); // Tracks the current form step
+
+const currentStep = ref(1);
 const nextStep = () => currentStep.value++;
 const prevStep = () => currentStep.value--;
 
-// Dummy Data
-const inputValue = ref("");
+
+const UserName = ref("");
 const selectState = ref("");
-const selectedPriority = ref("comfortable");
+const selectDistrict = ref("");
+const selectedOption = ref("");
+const UserWardNo = ref("");
+const UserStreetAddress = ref("");
+const MobileNumber = ref("");
+const Email = ref("");
+
+
 const states = ref([
   { label: "State 1", value: "option1" },
   { label: "State 2", value: "option2" },
 ]);
-const selectedOption = ref("");
-
-const selectDistrict = ref("");
-
+const district = ref([
+  { label: "Option 1", value: "dis1" },
+  { label: "Option 2", value: "dis2" },
+  { label: "Option 3", value: "dis3" },
+]);
 const options = ref([
   { label: "Option 1", value: "option1" },
   { label: "Option 2", value: "option2" },
   { label: "Option 3", value: "option3" },
 ]);
 
-const district = ref([
-  { label: "Option 1", value: "dis1" },
-  { label: "Option 2", value: "dis2" },
-  { label: "Option 3", value: "dis3" },
-]);
+
+const handleSubmit = () => {
+  console.log("Full Name:", UserName.value);
+  console.log("State:", selectState.value);
+  console.log("District:", selectDistrict.value);
+  console.log("Municipality:", selectedOption.value);
+  console.log("Ward No.:", UserWardNo.value);
+  console.log("Street Address:", UserStreetAddress.value);
+  console.log("Mobile Number:", MobileNumber.value);
+  console.log("Email:", Email.value);
+};
 </script>
+
 
 <style scoped></style>
