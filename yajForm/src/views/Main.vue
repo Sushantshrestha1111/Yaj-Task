@@ -47,18 +47,14 @@
                 <div
                   class="w-1 h-full items-center justify-center ml-4 bg-blue-100"
                 ></div>
-                
 
-               <div class="flex flex-row ">
-                <img 
-               class=" -mb-8"
-               :src="two" alt="two"/>
-               
-               </div>
+                <div class="flex flex-row">
+                  <img class="-mb-4" :src="two" alt="two" />
+                </div>
               </div>
 
               <!-- form Begins from here -->
-              <div class="flex flex-col ml-4  md:min-w-[900px]">
+              <div class="flex flex-col ml-4 md:min-w-[900px]">
                 <h1
                   class="text-[#222222] font-satoshi mb-6 text-[24px] font-medium"
                 >
@@ -159,7 +155,7 @@
                         v-model="selectDistrict"
                         :disabled="!selectState"
                         :class="{
-                          'bg-[#F6F6F6]': !selectState,
+                          'bg-gray-300': !selectState,
                           'block w-full px-3 h-[46px] text-[#A0A0A0] pr-10 py-2 border border-[#E9E9E9] bg-white rounded-md appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm': true,
                         }"
                       >
@@ -192,7 +188,7 @@
                         v-model="selectedOption"
                         :disabled="!selectDistrict"
                         :class="{
-                          'bg-[#F6F6F6]': !selectDistrict,
+                          'bg-gray-300': !selectDistrict,
                           'block w-full px-3 h-[46px] text-[#A0A0A0] pr-10 py-2 border border-[#E9E9E9] bg-white rounded-md appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm': true,
                         }"
                       >
@@ -250,22 +246,21 @@
                     >Related Document (if any)</Label
                   >
 
-                 
                   <div
-  class="h-[80px] bg-white border-[#E9E9E9] border-2 border-dashed flex items-center justify-center cursor-pointer relative"
-  @click="triggerFileUpload"
->
-  <span class="text-[#444444] text-center">
-    Drop your file here or click to upload from your computer.
-  </span>
-  <input
-    ref="fileInput"
-    type="file"
-    id="file-upload"
-    @change="handleFileChange"
-    class="absolute inset-0 opacity-0 cursor-pointer"
-  />
-</div>
+                    class="h-[80px] bg-white border-gray-300 border-2 border-dashed flex items-center justify-center cursor-pointer relative"
+                    @click="triggerFileUpload"
+                  >
+                    <span class="text-[#444444] text-center">
+                      Drop your file here or click to upload from your computer.
+                    </span>
+                    <input
+                      ref="fileInput"
+                      type="file"
+                      id="file-upload"
+                      @change="handleFileChange"
+                      class="absolute inset-0 opacity-0 cursor-pointer"
+                    />
+                  </div>
                 </div>
 
                 <!-- Brief Description of complaint * -->
@@ -377,7 +372,7 @@
                   >
                 </div>
                 <h1
-                  class="text-[#A0A0A0] font-satoshi -mb-8 text-[24px] font-medium"
+                  class="text-[#A0A0A0] font-satoshi -mb-5 text-[24px] font-medium"
                 >
                   Personal Details
                 </h1>
@@ -506,7 +501,7 @@
                           v-model="selectDistrict"
                           :disabled="!selectState"
                           :class="{
-                            'bg-gray-200': !selectState,
+                            'bg-gray-300': !selectState,
                             'block w-full px-3 h-[46px] text-[#A0A0A0] pr-10 py-2 border border-[#E9E9E9] bg-white rounded-md appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm': true,
                           }"
                         >
@@ -539,7 +534,7 @@
                           v-model="selectedOption"
                           :disabled="!selectDistrict"
                           :class="{
-                            'bg-gray-200': !selectDistrict,
+                            'bg-gray-300': !selectDistrict,
                             'block w-full px-3 h-[46px] text-[#A0A0A0] pr-10 py-2 border border-[#E9E9E9] bg-white rounded-md appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm': true,
                           }"
                         >
@@ -599,10 +594,11 @@
                     <!-- mobile number -->
                   </div>
                   <div class="">
-                    <Label
-                      class="font-satoshi text-[#777777] mb-[16px] text-[16px]"
-                      >Mobile Number <span class="text-red-500">*</span></Label
+                    <label
+                      class="font-satoshi text-[#777777] mb-[4px] relative text-[16px]"
                     >
+                      Mobile Number <span class="text-red-500">*</span>
+                    </label>
 
                     <input
                       id="Mobile Number"
@@ -632,17 +628,16 @@
                   <div class="flex justify-end">
                     <Button
                       @click="prevStep"
-                      class="text-blue-500 m-5 h-10 p-2 rounded-md border border-blue-500 bg-white border-blue"
+                      class="text-blue-500 mt-5 h-10 items-center flex  rounded-md border border-[#0F75BC] p-5 bg-white border-blue"
                       >Go Back</Button
                     >
 
                     <Button
-  class="bg-blue-500 m-5 h-10 p-2 rounded-md text-white"
-  @click="handleSubmit"
->
-  Submit Form
-</Button>
-
+                      class="bg-[#0F75BC] m-5 h-10 p-5 items-center flex justify-center rounded-md text-white"
+                      @click="handleSubmit"
+                    >
+                      Submit Form
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -662,11 +657,9 @@ import line from "../assets/images/line.svg";
 import two from "../assets/images/two.svg";
 import { ref } from "vue";
 
-
 const currentStep = ref(1);
 const nextStep = () => currentStep.value++;
 const prevStep = () => currentStep.value--;
-
 
 const UserName = ref("");
 const selectState = ref("");
@@ -676,7 +669,6 @@ const UserWardNo = ref("");
 const UserStreetAddress = ref("");
 const MobileNumber = ref("");
 const Email = ref("");
-
 
 const states = ref([
   { label: "State 1", value: "option1" },
@@ -693,7 +685,6 @@ const options = ref([
   { label: "Option 3", value: "option3" },
 ]);
 
-
 const handleSubmit = () => {
   console.log("Full Name:", UserName.value);
   console.log("State:", selectState.value);
@@ -705,6 +696,5 @@ const handleSubmit = () => {
   console.log("Email:", Email.value);
 };
 </script>
-
 
 <style scoped></style>
